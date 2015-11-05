@@ -13,6 +13,8 @@ License: GNU General Public License
 /* ResetSo sorry you won't be able to make it to our record release show. You can still pick up a copy of the record here(add link).
 -------------------------------------------------------------- */
 
+@import 'styles/fonts.css';
+
 html,
 body,
 div,
@@ -337,7 +339,7 @@ h4,
 h5,
 h6 {
   clear: both;
-  font-family: "Quicksand", Helvetica, sans-serif;
+  font-family: "HelveticaNeueLTStd-BdOu", Helvetica, sans-serif;
 }
 h1 {
   line-height: 71px;
@@ -434,6 +436,7 @@ a:focus,
 a:active {
   color: rgba(0, 121, 152, 0.5);
 }
+
 /* Alignment */
 .alignleft {
   display: inline;
@@ -453,6 +456,10 @@ a:active {
 .center {
   text-align: center;
 }
+
+img {
+  max-width: 100%;
+}
 /* Header
 -------------------------------------------------------------- */
 .site-title a{
@@ -460,16 +467,11 @@ a:active {
   font-size: 4em;
   text-align: center;
 }
-.site-title a:hover{
-}
+
 .site-description{
   font-style: italic;
 }
-/*header {
-  padding: 20px 0;
-  background: transparent;
-  margin: 20px auto;
-}*/
+
 header .gravatar {
   overflow: hidden;
   width: 100px;
@@ -523,13 +525,22 @@ header nav ul li a {
   font-weight: bold;
   text-transform: uppercase;
 }
-/*header nav ul li a:hover {
-  text-decoration: underline;
-}*/
+
+header nav ul li a {
+  font-family: "HelveticaNeueLTStd-Blk", Helvetica, sans-serif;
+}
+
+header nav ul li a:hover {
+  font-family: "HelveticaNeueLTStd-BdOu", Helvetica, sans-serif;
+}
+
+#masthead {
+  height: 160px;
+}
 #hamburger {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  left: 15px;
 }
 #closeBtn {
   position: absolute;
@@ -562,6 +573,10 @@ header nav ul li a {
   display: none;
 }
 
+.default-page {
+  max-width: 700px;
+  margin: auto;
+}
 
 /* Posts/Articles
 -------------------------------------------------------------- */
@@ -758,14 +773,13 @@ html[xmlns] .clearfix {
 /* Homepage */
 .logo {
   width: 80px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .sya{
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
   height: 100%;
-  padding: 10px;
   box-sizing: border-box;
 }
 .banner {
@@ -790,11 +804,12 @@ html[xmlns] .clearfix {
   box-sizing: border-box;*/
 }
 
-.video-content iframe {
+.video-content .video-thumb  {
   width: 48%;
   margin: 0 1% 1%;
   float: left;
 }
+
 .video-content p {
   display: inline;
 }
