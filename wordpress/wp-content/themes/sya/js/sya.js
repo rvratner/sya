@@ -4,11 +4,16 @@
 "use strict";
 
 var init = function(){
+	"use strict";
 	toggleNav();
+
+	if (document.querySelector('.page-template-page-video')){
+		toggleVideoModal();
+	}
 };
 
 var toggleNav = function(){
-	console.log('in toggle nav');
+	"use strict";
 	// open nav
 	$('#hamburger').click(function(){
 		$('.main-navigation').addClass('show');
@@ -16,6 +21,14 @@ var toggleNav = function(){
 	// close nav
 	$('#closeBtn').click(function(){
 		$('.main-navigation').removeClass('show');
+	});
+};
+
+var toggleVideoModal = function(){
+	"use strict";
+	$('.video-thumb').click(function(event){
+		event.preventDefault();
+		console.log(event);
 	});
 };
 

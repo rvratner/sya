@@ -806,14 +806,35 @@ html[xmlns] .clearfix {
   width: 48%;
   margin: 0 1% 1%;
   float: left;
+  position: relative;
 }
-
+.video-content .play {
+  background-image: url('../sya/img/youtube.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  height: 35px;
+  width: 50px;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0.9;
+}
+.video-content .play:hover{
+  opacity: 1;
+}
 .video-content p {
   display: inline;
 }
 .video-sidebar {
   width: 19%;
   float: left;
+}
+#video-modal {
+  display:none;
 }
 @media only screen and (max-width: 767px) {
 

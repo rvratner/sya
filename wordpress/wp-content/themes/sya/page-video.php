@@ -11,17 +11,18 @@
 				query_posts('cat=3');
 				while (have_posts()) : the_post();?>
 			
-				<a class="video-thumb" href="#"><img src="https://i.ytimg.com/vi/<?php the_content() ?>/sddefault.jpg" /></a>
+				<a class="video-thumb" href="<?php the_content(); ?>">
+					<img src="https://i.ytimg.com/vi/<?php the_content(); ?>/sddefault.jpg" alt="video thumbnail" />
+					<span class="play"></span>
+				</a>
 
 				
 			<?php endwhile; ?>
-http://www.youtube.com/embed/VIDEO_ID
-				<iframe id="ytplayer" type="text/html" width="640" height="390"
-  src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=0&origin=http://example.com"
-  frameborder="0" showinfo="0" rel="0" modestbranding="0"/>
 
+			<div id="video-modal">
+				<a id="closeBtn" href="#">X</a>
+			</div>
 		</div><!-- #content .site-content -->
 	</div><!-- #primary .content-area -->
-
 
 <?php get_footer(); ?>
