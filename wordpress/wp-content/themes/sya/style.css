@@ -1,17 +1,12 @@
-/*@import url(http://fonts.googleapis.com/css?family=Karla|Quicksand);*/
-/*@import url('styles/boots-bones.css');*/
-/*
-Theme Name: Naked Wordpress
-Theme URI: http://bckmn.com/naked-wordpress
-Author: J Beckman
-Author URI: http://bckmn.com
-Description: A super bare theme for designers who don't know Wordpress PHP but want to build with Wordpress.
-Version: 1.0
-License: GNU General Public License
 
--------------------------------------------------------------- */
-/* ResetSo sorry you won't be able to make it to our record release show. You can still pick up a copy of the record here(add link).
--------------------------------------------------------------- */
+/*
+Theme Name: SYA
+Theme URI: http://bckmn.com/naked-wordpress
+Author: R Ratner
+Author URI: http://www.rachelratner.com
+Version: 1.0
+
+*/
 
 @import 'styles/fonts.css';
 
@@ -103,6 +98,7 @@ video {
   font: inherit;
   font-size: 100%;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -794,7 +790,9 @@ html[xmlns] .clearfix {
 .home .sya {
   background-image: url('../sya/img/shout.png');
 }
-
+.home #content {
+  text-align: center;
+}
 /* video content */
 .video-content {
   width: 70%;
