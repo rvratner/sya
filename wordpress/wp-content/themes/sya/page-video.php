@@ -12,16 +12,16 @@
 				while (have_posts()) : the_post();?>
 			
 				<a class="video-thumb" href="<?php the_content(); ?>">
-					<img src="https://i.ytimg.com/vi/<?php the_content(); ?>/sddefault.jpg" alt="video thumbnail" />
-					<span class="play"></span>
+					<img src="https://i.ytimg.com/vi/<?php the_content(); ?>/sddefault.jpg" id="<?php the_content(); ?>"  alt="video thumbnail" />
+					<span id="<?php the_content(); ?>" class="play"></span>
 				</a>
 
 				
 			<?php endwhile; ?>
 
 			<div id="video-modal">
-				<a id="closeBtn" href="#">X</a>
-			</div>
+				<a class="close" id="closeVideoBtn" href="#">X</a>
+			</div><!-- #video-modal -->
 		</div><!-- #content .site-content -->
 	</div><!-- #primary .content-area -->
 

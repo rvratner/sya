@@ -3,8 +3,8 @@
 
 "use strict";
 
+
 var init = function(){
-	"use strict";
 	toggleNav();
 
 	if (document.querySelector('.page-template-page-video')){
@@ -13,7 +13,6 @@ var init = function(){
 };
 
 var toggleNav = function(){
-	"use strict";
 	// open nav
 	$('#hamburger').click(function(){
 		$('.main-navigation').addClass('show');
@@ -25,12 +24,30 @@ var toggleNav = function(){
 };
 
 var toggleVideoModal = function(){
-	"use strict";
 	$('.video-thumb').click(function(event){
 		event.preventDefault();
-		console.log(event);
+		openModal(event.target.id);
+	});
+	$('.play').click(function(event){
+		event.preventDefault();
+		openModal(event.target.id);
+	});
+	$('#closeVideoBtn').click(function(event){
+		event.preventDefault();
+		closeModal();
 	});
 };
+
+var openModal = function(id){
+	$('#video-modal').addClass('show');
+	$('#video-modal').append('<iframe id="ytplayer" width="640" height="390" src="http://www.youtube.com/embed/' + id + '?autoplay=1&origin=http://shoutyourabortion.com" frameborder="0" showinfo="0" rel="0" modestbranding="0"/>');
+};
+
+var closeModal = function(){
+	$('#video-modal').removeClass('show');
+	$('#video-modal').remove('#ytplayer');
+};
+
 
 window.onload = init ();
 	
