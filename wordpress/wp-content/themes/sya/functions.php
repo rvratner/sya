@@ -59,7 +59,7 @@ function naked_scripts()  {
 	wp_enqueue_style('style.css', get_stylesheet_directory_uri() . '/style.css');
 	
 	// add fitvid
-	//wp_enqueue_script( 'naked-fitvid', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), NAKED_VERSION, true );
+	wp_enqueue_script( 'naked-fitvid', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), NAKED_VERSION, true );
 	
 	// add theme scripts
 	//wp_enqueue_script( 'naked', get_template_directory_uri() . '/js/theme.min.js', array(), NAKED_VERSION, true );
@@ -70,8 +70,8 @@ function naked_scripts()  {
 }
 add_action( 'wp_enqueue_scripts', 'naked_scripts' ); // Register this fxn and allow Wordpress to call it automatcally in the header
 // remove youtube
-remove_filter( 'the_content', array( $GLOBALS['wp_embed'], 'autoembed' ), 8 );
-remove_filter( 'the_content', 'wpautop' );
-remove_filter( 'the_excerpt', 'wpautop' );
+//remove_filter( 'the_content', array( $GLOBALS['wp_embed'], 'autoembed' ), 8 );
+//remove_filter( 'the_content', 'wpautop' );
+//remove_filter( 'the_excerpt', 'wpautop' );
 
         

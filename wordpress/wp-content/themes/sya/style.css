@@ -1,11 +1,8 @@
-
 /*
 Theme Name: SYA
-Theme URI: http://bckmn.com/naked-wordpress
 Author: R Ratner
 Author URI: http://www.rachelratner.com
 Version: 1.0
-
 */
 
 @import 'styles/fonts.css';
@@ -117,14 +114,8 @@ html {
   margin: 0;
   padding: 0;
   font-size: 62.5%;
-  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
-
   -webkit-text-size-adjust: 100%;
-  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
-
   -ms-text-size-adjust: 100%;
-  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
-
 }
 ol,
 ul {
@@ -196,24 +187,14 @@ input,
 select,
 textarea {
   font-size: 100%;
-  /* Corrects font size not being inherited in all browsers */
-
   margin: 0;
-  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
-
   vertical-align: baseline;
   *vertical-align: middle;
-  /* Improves appearance and consistency in all browsers */
-
 }
 button,
 input {
   line-height: normal;
-  /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
-
   *overflow: visible;
-  /* Corrects inner spacing displayed oddly in IE6/7 */
-
 }
 button,
 html input[type="button"],
@@ -224,11 +205,7 @@ input[type="submit"] {
   background: #ccc;
   color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
-  /* Improves usability and consistency of cursor style between image-type 'input' and others */
-
   -webkit-appearance: button;
-  /* Corrects inability to style clickable 'input' types in iOS */
-
   font-size: 12px;
   font-size: 1.4rem;
   line-height: 1;
@@ -257,31 +234,19 @@ input[type="submit"]:active {
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
-  /* Addresses box sizing set to content-box in IE8/9 */
-
   padding: 0;
-  /* Addresses excess padding in IE8/9 */
-
 }
 input[type="search"] {
   -webkit-appearance: textfield;
-  /* Addresses appearance set to searchfield in S5, Chrome */
-
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
-  /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-
   box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-decoration {
-  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
-
   -webkit-appearance: none;
 }
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
-
   border: 0;
   padding: 0;
 }
@@ -303,14 +268,11 @@ input[type=email] {
 }
 textarea {
   overflow: auto;
-  /* Removes default vertical scrollbar in IE6/7/8/9 */
-
   padding: 10px;
   vertical-align: top;
-  /* Improves readability and alignment in all browsers */
-
   width: 98%;
 }
+
 /* styles
 -------------------------------------------------------------- */
 body,
@@ -325,6 +287,7 @@ select {
   font-size: 18px;
   font-size: 1.8rem;
 }
+
 /* typography
 -------------------------------------------------------------- */
 /* Headings */
@@ -420,34 +383,13 @@ pre {
 /* Links */
 a {
   text-decoration: none;
-  color: #f10016;
+  color: rgba(0, 121, 152, 0.5);
 }
 a:hover,
 a:focus,
 a:active,
 a:visited {
-/*  color: rgba(0, 121, 152, 0.5);
-*/  color: #f10016;
-}
-
-/* Alignment */
-.alignleft {
-  display: inline;
-  float: left;
-  margin-right: 1.5em;
-}
-.alignright {
-  display: inline;
-  float: right;
-  margin-left: 1.5em;
-}
-.aligncenter {
-  clear: both;
-  display: block;
-  margin: 0 auto;
-}
-.center {
-  text-align: center;
+  color: rgba(0, 121, 152, 0.5);
 }
 
 img {
@@ -455,54 +397,7 @@ img {
 }
 /* Header
 -------------------------------------------------------------- */
-.site-title a{
-  text-transform: uppercase;
-  font-size: 4em;
-  text-align: center;
-}
 
-.site-description{
-  font-style: italic;
-}
-
-header .gravatar {
-  overflow: hidden;
-  width: 100px;
-  height: 100px;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  margin: 0;
-  float: right;
-}
-header #brand {
-  margin:1em 0;
-}
-header #brand h1 {
-  font-weight: 900;
-  color: #565656;
-  font-size: 16px;
-  font-size: 1.6rem;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.45em;
-}
-header #brand h1 a {
-  color: #565656;
-  text-decoration: none;
-}
-header #brand h1 span {
-  font-weight: 200;
-  color: #888888;
-  text-transform: lowercase;
-}
-header nav {
-  font-family: "HelveticaNeueLT-Condensed", Helvetica, sans-serif;
-}
-.menu-main-nav-container, .menu-main-container {
-  float: right;
-}
 header nav ul {
   list-style: none;
   margin: 0;
@@ -536,9 +431,7 @@ header nav ul li a:hover {
 #masthead {
   height: 60px;
 }
-#masthead.open{
-  height: 140px;
-}
+
 #hamburger {
   position: absolute;
   top: 15px;
@@ -550,7 +443,7 @@ header nav ul li a:hover {
 }
 
 .main-navigation {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
 }
@@ -611,7 +504,6 @@ html[xmlns] .clearfix {
   height: 1%;
 }
 
-/* Customizations */
 /* Homepage */
 .logo {
   height: 70%;
@@ -632,17 +524,25 @@ html[xmlns] .clearfix {
 }
 /* video content */
 .video-content {
-  width: 70%;
+  margin: 20px auto;
+  /*width: 70%;
   float: left;
   margin-bottom: 30px;
+  max-width: 700px;*/
 
 }
-
+.video-content iframe {
+  display: block;
+  margin: auto;
+  width:640px; 
+  height:360px;
+  max-width: 100%;
+}
 .video-content .video-thumb  {
-  width: 48%;
+ /* width: 48%;
   margin: 0 1% 1%;
   float: left;
-  position: relative;
+  position: relative;*/
 }
 .video-content .play {
   background-image: url('../sya/img/youtube.png');
@@ -701,17 +601,22 @@ html[xmlns] .clearfix {
   right: 0;
   margin: auto;
 }
-.page-template-page-video #content {
+/*.page-template-page-video #content {
   text-align: center;
+}*/
+.page-template-page-video .sya #primary {
+  max-width: 1004px;
+  margin: auto;
 }
 
 .page-template-page-contact h1{
   font-size: 3.8rem;
 }
-/*.page-template-page-contact .sya, .page-template-page-video .sya {
-  padding: 15px;
-}*/
+
 @media only screen and (max-width: 767px) {
+  .main-navigation{
+    position: absolute;
+  }
   #masthead {
     height: 40px;
   }
@@ -719,22 +624,24 @@ html[xmlns] .clearfix {
     height: 100px;
   }
   .video-content {
-    width: 200%;
+    width: 100%;
     float: none;
-/*    padding: 10px;
-    box-sizing: border-box;*/
   }
 
   .video-content iframe {
-    width: 100%;
+/*    width: 100%;
     margin: 0;
-    float: none;
+    float: none;*/
   }
 
   .video-sidebar {
     width: 100%;
     float: none;
-/*    padding-left: 10px;
-    box-sizing: border-box;*/
+  }
+}
+
+@media only screen and (max-width: 375px){
+  .video-content iframe{
+    height: 260px;
   }
 }

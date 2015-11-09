@@ -7,7 +7,7 @@ var init = function(){
 	toggleNav();
 
 	if (document.querySelector('.page-template-page-video')){
-		renderYouTube();
+		//renderYouTube();
 	}
 };
 
@@ -51,7 +51,8 @@ function renderYouTube(){
 	$.get( "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId="+pageId+"&order=date&key=AIzaSyDAsJA_EFa4LFC9-oNjACVaOMaGFEj604E", function( data ) {
   			for (var i=0; i<data.items.length; i++){
 				var youtubeId=data.items[i].id.videoId;
-				var img =data.items[i].snippet.thumbnails.high.url;
+				// switch to high if looks bad	
+				var img = data.items[i].snippet.thumbnails.medium.url;
 				if (youtubeId != undefined){
 					content.innerHTML += '<a class="video-thumb" data-href="'+youtubeId+'" href="#"><img src="'+img+'" id="'+youtubeId+'"  alt="video thumbnail" /><span id="'+youtubeId+'" class="play"></span></a>';
 				} 
@@ -62,7 +63,7 @@ function renderYouTube(){
 
 var openModal = function(id){
 	$('#video-modal').addClass('show');
-	$('#video-modal').append('<iframe id="ytplayer" width="640" height="390" src="http://www.youtube.com/embed/' + id + '?autoplay=1&origin=http://shoutyourabortion.com" frameborder="0" showinfo="0" rel="0" modestbranding="0"/>');
+	$('#video-modal').append('<iframe id="ytplayer" width="640" height="360" src="http://www.youtube.com/embed/' + id + '?autoplay=1&origin=http://shoutyourabortion.com" frameborder="0" showinfo="0" rel="0" modestbranding="0"/>');
 };
 
 var closeModal = function(){
