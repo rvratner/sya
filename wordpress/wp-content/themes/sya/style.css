@@ -538,7 +538,11 @@ header nav ul li a:hover {
   top: 15px;
   left: 15px;
 }
+<<<<<<< HEAD
 /*#closeBtn {
+=======
+.close {
+>>>>>>> bc674c8db65583b123d5acd9c193abb700988c8b
   position: absolute;
   right: 10px;
   top: 10px;
@@ -781,7 +785,13 @@ html[xmlns] .clearfix {
   background-position: center;
   height: 100%;
   box-sizing: border-box;
+<<<<<<< HEAD
 }*/
+=======
+  max-width: 1300px;
+  margin: auto;
+}
+>>>>>>> bc674c8db65583b123d5acd9c193abb700988c8b
 .banner {
   font-family: 'HelveticaNeueLT-CondensedObl', Helvetica, sans-serif;
 }
@@ -794,7 +804,7 @@ html[xmlns] .clearfix {
 /* video content */
 .video-content {
   width: 70%;
-  float: right;
+  float: left;
   margin-bottom: 30px;
 /*  padding: 15px;
   box-sizing: border-box;*/
@@ -830,9 +840,40 @@ html[xmlns] .clearfix {
 .video-sidebar {
   width: 19%;
   float: left;
+  max-width: 200px;
 }
 #video-modal {
   display:none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: #000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#video-modal.show {
+  display: block;
+}
+#video-modal .close {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  color: #fff;
+}
+
+#ytplayer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.page-template-page-video #content {
+  text-align: center;
 }
 
 .page-template-page-contact .sya {

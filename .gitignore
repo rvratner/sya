@@ -1,2 +1,4 @@
 .DS_Store
 assets
+credentials.csv
+developer-key-pair-uswest2.pem
