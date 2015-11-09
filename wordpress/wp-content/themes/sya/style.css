@@ -419,19 +419,19 @@ pre {
 }
 /* Links */
 a {
-  color: #007998;
+/*  color: #007998;
   -webkit-transition: color 0.25s ease-in-out;
   -moz-transition: color 0.25s ease-in-out;
   -o-transition: color 0.25s ease-in-out;
   -ms-transition: color 0.25s ease-in-out;
-  transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;*/
   text-decoration: none;
 }
 a:hover,
 a:focus,
 a:active {
-  color: rgba(0, 121, 152, 0.5);
-}
+/*  color: rgba(0, 121, 152, 0.5);
+*/}
 
 /* Alignment */
 .alignleft {
@@ -514,35 +514,35 @@ header nav ul li {
   /*float: left;
   margin: 2px 10px 0 0;*/
   text-align:left;
+  height: 20px;
 }
 header nav ul li a {
   color: #000;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 16px;
   text-transform: uppercase;
 }
 
 header nav ul li a {
-  font-family: "HelveticaNeueLTStd-Blk", Helvetica, sans-serif;
+  font-family: "HelveticaNeueLT-Black", Helvetica, sans-serif;
 }
 
 header nav ul li a:hover {
-  font-family: "HelveticaNeueLTStd-BdOu", Helvetica, sans-serif;
+  font-family: "HelveticaNeueLT-BoldOutline", Helvetica, sans-serif;
 }
 
 #masthead {
-  height: 160px;
+  height: 110px;
 }
 #hamburger {
   position: absolute;
   top: 15px;
   left: 15px;
 }
-#closeBtn {
+/*#closeBtn {
   position: absolute;
   right: 10px;
   top: 10px;
-}
+}*/
 .main-navigation {
   position: absolute;
   top: 0px;
@@ -553,15 +553,18 @@ header nav ul li a:hover {
 }
 .main-navigation .menu {
   padding: 15px;
-  width: 300px;
+  display: none;
+/*  width: 300px;
   background-color: #fff;
   box-shadow: 1px 1px 1px #888888;
-  display: none;
-  box-shadow: border-box;
+  box-shadow: border-box;*/
 }
-.main-navigation.show {
+.menu {
+  background-color: #fff;
+}
+/*.main-navigation.show {
   width: 330px;
-}
+}*/
 .main-navigation.show .menu {
   display:block;
 }
@@ -768,28 +771,23 @@ html[xmlns] .clearfix {
 /* Customizations */
 /* Homepage */
 .logo {
-  width: 80px;
-  margin-top: 20px;
+  height: 70%;
+  min-height: 200px;
+  max-height: 700px;
 }
-.sya{
+/*.sya{
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
   height: 100%;
   box-sizing: border-box;
-}
+}*/
 .banner {
-  width: 100%;
-  background-color: #000;
-  color: #fff;
-  padding: 100px 50px;
-  font-size: 40px;
-  line-height: 1.2;
-  box-sizing: border-box;
+  font-family: 'HelveticaNeueLT-CondensedObl', Helvetica, sans-serif;
 }
-.home .sya {
+/*.home .sya {
   background-image: url('../sya/img/shout.png');
-}
+}*/
 .home #content {
   text-align: center;
 }
@@ -835,6 +833,10 @@ html[xmlns] .clearfix {
 }
 #video-modal {
   display:none;
+}
+
+.page-template-page-contact .sya {
+  padding: 15px;
 }
 @media only screen and (max-width: 767px) {
 

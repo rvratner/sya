@@ -19,8 +19,11 @@ var toggleNav = function(){
 		$('.main-navigation').addClass('show');
 	});
 	// close nav
-	$('#closeBtn').click(function(){
-		$('.main-navigation').removeClass('show');
+	$('body').click(function(event){
+		var el = event.target.id;
+		if (el == "masthead"){
+			$('.main-navigation').removeClass('show');
+		}
 	});
 };
 
