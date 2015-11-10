@@ -33,21 +33,22 @@
         $name = $_POST['message_name'];
     
     if (isset($_POST['message_email']))
-        $name = $_POST['message_email'];
+        $email = $_POST['message_email'];
     
     if (isset($_POST['message_text']))
-        $name = $_POST['message_text'];
+        $message = 'message: '.$_POST['message_text'];
     
     if (isset($_POST['youtube_link']))
-        $name = $_POST['youtube_link'];
+        $youtube = 'youtube link: '.$_POST['youtube_link'];
     
     if (isset($_POST['message_human']))
-        $name = $_POST['message_human'];
+        $human = $_POST['message_human'];
     
 
   //php mailer variables
   $to = get_option('admin_email');
-  $subject = "Someone sent a message from ".get_bloginfo('name');
+
+  $subject = "Email from ".get_bloginfo('name');
   $headers = 'From: '. $email . "\r\n" .
     'Reply-To: ' . $email . "\r\n";
 
@@ -61,12 +62,14 @@
       else //email is valid
       {
         //validate presence of name and message
-        if(empty($name) || empty($message)){
+        if(empty($message) || empty($youtube)){
           my_contact_form_generate_response("error", $missing_content);
         }
         else //ready to go!
         {
-          $sent = wp_mail($to, $subject, strip_tags($message), $headers);
+          $body = $message . ' ------------- ' . $youtube;
+          $sent = wp_mail($to, $subject, strip_tags($body), $headers);
+   
           if($sent) my_contact_form_generate_response("success", $message_sent); //message sent!
           else my_contact_form_generate_response("error", $message_unsent); //message wasn't sent
         }
@@ -74,7 +77,6 @@
     }
   }
   else if ( $_POST['submitted']) my_contact_form_generate_response("error", $missing_content);
-
 
 ?>
 
@@ -120,7 +122,7 @@
                   <p><label for="name">Name: </label><br><input type="text" name="message_name" value=""></p>
                   <p><label for="message_email">Email: </label></br><input type="text" name="message_email" value=""></p>
                   <p><label for="message_text">Share your story: <span>*</span> <br><textarea type="text" name="message_text"></textarea></label></p>
-                  <p><label for="message_text">Share a video:</label> <br><textarea type="text" name="youtube_link"></textarea></p>
+                  <p><label for="message_text">Share a youtube video:</label> <br><input type="text" name="youtube_link" size="50" placeholder="https://www.youtube.com/watch?v=jgxL-PwmY7s"></p>
                   <p><label for="message_human">Human Verification: </label><br><input type="text" style="width: 60px;" name="message_human"> + 3 = 5</p>
                   <input type="hidden" name="submitted" value="1">
                   <p><input type="submit"></p>
