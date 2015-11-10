@@ -117,7 +117,7 @@
                 <form action="<?php the_permalink(); ?>" method="post">
                   <p><label for="name">Name: </label><br><input type="text" name="message_name" value=""></p>
                   <p><label for="message_email">Email: </label></br><input type="text" name="message_email" value=""></p>
-                  <p><label for="message_text">Share your story: <span>*</span> <br><textarea type="text" name="message_text"></textarea></label></p>
+                  <p><label for="message_text">Get in touch or share your story: <span>*</span> <br><textarea type="text" name="message_text"></textarea></label></p>
                   <p><label for="message_human">Human Verification: </label><br><input type="text" style="width: 60px;" name="message_human"> + 3 = 5</p>
                   <input type="hidden" name="submitted" value="1">
                   <p><input type="submit"></p>
