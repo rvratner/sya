@@ -4,13 +4,15 @@
 
 
 <h2><?php the_title(); ?></h2>
-
+<a href="https://www.youtube.com/watch?v=8AL15Hw0yvc&feature=youtu.be&list=PLYmjq_ZuA6B3SZCnqGocXYJU_myO7bOB4" target="_blank">Visit youtube channel</a>
 	<div id="primary" class="row-fluid">
-		<div class="video-sidebar"><a href="https://www.youtube.com/channel/UC-zikEgBZyUu9OhbnDlTsJQ" target="_blank">Visit youtube channel</a></div>
+
 		<div id="content" role="main" class="video-content">
-			<div id="video-modal">
+			<!-- <div id="video-modal">
 				<a class="close" id="closeVideoBtn" href="#">X</a>
-			</div><!-- #video-modal -->
+			</div> -->
+				<iframe  src="https://www.youtube.com/embed/8AL15Hw0yvc?list=PLYmjq_ZuA6B3SZCnqGocXYJU_myO7bOB4" frameborder="0" allowfullscreen></iframe>
+				
 		</div><!-- #content .site-content -->
 	</div><!-- #primary .content-area -->
 
