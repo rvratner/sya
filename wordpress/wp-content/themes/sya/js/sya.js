@@ -9,6 +9,10 @@ var init = function(){
 	if (document.querySelector('.page-template-page-video')){
 		//renderYouTube();
 	}
+
+	if (document.querySelector('.page-template-page-protest')){
+		loadAssetBuilder();
+	}
 };
 
 var toggleNav = function(){
@@ -71,7 +75,49 @@ var closeModal = function(){
 	$('#video-modal').removeClass('show');
 };
 
+var loadAssetBuilder = function(){
+	// select image
+	$('.protest_examples img').on('click', function(){
+		console.log(this.dataset.href);
+		document.querySelector('.transparent_image').style.backgroundImage='url('+this.dataset.href+')';
+	});
 
+	// change color
+	$('.jscolor').on('change', function(){
+		updateColor(this.value);
+	});
+
+	// select text
+	$('#customizations').on('change',function(){
+		$('.show').removeClass('show');
+		document.getElementById(this.value).className = "show";
+		if(this.value=="custom"){
+			document.getElementById('customText').className="show";
+		}
+	});
+
+	// custom text
+	$('#customText').on('keyup', function(){
+		document.getElementById('custom').innerHTML = this.value;
+	});
+
+	// clean up and make function
+	// download pdf
+
+	var pdf = new jsPDF('p','pt','a4');
+	console.log(pdf,document.getElementById('color_rect'));
+	pdf.addHTML(document.body, false, false, false, function() {
+		var string = pdf.output('datauristring');
+		$('.preview-pane').attr('src', string);
+		//pdf.save();
+	});
+		//pdf.save();
+
+}
+
+var updateColor = function(jscolor){
+	document.getElementById('color_rect').style.backgroundColor = '#' + jscolor
+}
 window.onload = init ();
 	
 })(jQuery);
