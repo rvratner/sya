@@ -48,7 +48,7 @@
 	<div class="container center">
 
 		<nav role="navigation" class="site-navigation main-navigation">
-			<a id="hamburger" href="#">&#9776;</a>
+			<a id="hamburger" href="#"></a>
 
 <!-- 			<a class="close" id="closeBtn" href="#">X</a>
  -->			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); // Display the user-defined menu in Appearance > Menus ?>

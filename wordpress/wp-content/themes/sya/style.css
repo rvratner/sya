@@ -298,11 +298,7 @@ h4,
 h5,
 h6 {
   clear: both;
-<<<<<<< HEAD
-  font-family: "HelveticaNeueLT-BoldOutline", Helvetica, sans-serif;
-=======
   font-family: "HelveticaNeueLT-ExtBlackCond", Helvetica, sans-serif;
->>>>>>> 5c1156d7899ee57b8a3c7a804093ebccce4ea14a
 }
 h1 {
   line-height: 80px;
@@ -387,22 +383,14 @@ pre {
 /* Links */
 a {
   text-decoration: none;
-<<<<<<< HEAD
-  color: #f10016;
-=======
   color: rgba(0, 121, 152, 0.5);
->>>>>>> 5c1156d7899ee57b8a3c7a804093ebccce4ea14a
 }
 a:hover,
 a:focus,
 a:active,
 a:visited {
-<<<<<<< HEAD
-/*  color: rgba(0, 121, 152, 0.5);
-*/  color: #f10016;
-=======
+
   color: rgba(0, 121, 152, 0.5);
->>>>>>> 5c1156d7899ee57b8a3c7a804093ebccce4ea14a
 }
 
 img {
@@ -411,7 +399,6 @@ img {
 /* Header
 -------------------------------------------------------------- */
 
-<<<<<<< HEAD
 .site-description{
   font-style: italic;
 }
@@ -454,8 +441,7 @@ header nav {
 .menu-main-nav-container, .menu-main-container {
   float: right;
 }
-=======
->>>>>>> 5c1156d7899ee57b8a3c7a804093ebccce4ea14a
+
 header nav ul {
   list-style: none;
   margin: 0;
@@ -488,12 +474,6 @@ header nav ul li a:hover {
 
 #masthead {
   height: 60px;
-<<<<<<< HEAD
-}
-#masthead.open{
-  height: 140px;
-=======
->>>>>>> 5c1156d7899ee57b8a3c7a804093ebccce4ea14a
 }
 
 #hamburger {
@@ -501,6 +481,12 @@ header nav ul li a:hover {
   top: 15px;
   left: 15px;
   color: #000;
+  font-size: 30px;
+  background-image:url('img/hamburger.gif');
+  background-repeat: no-repeat;
+  height:30px;
+  width: 30px;
+  background-size: 100%;
 }
 #hamburger:active, #hamburger:visited{
   color: #000;
@@ -576,7 +562,8 @@ html[xmlns] .clearfix {
 }
 .sya{
   padding: 0 15px;
-  max-width: 1300px;
+  max-width: 700px;
+  width: 100%;
   margin: auto;
 }
 .banner {
@@ -592,12 +579,7 @@ html[xmlns] .clearfix {
   /*width: 70%;
   float: left;
   margin-bottom: 30px;
-<<<<<<< HEAD
-
-}
-=======
   max-width: 700px;*/
->>>>>>> 5c1156d7899ee57b8a3c7a804093ebccce4ea14a
 
 }
 .video-content iframe {
@@ -673,12 +655,12 @@ html[xmlns] .clearfix {
 /*.page-template-page-video #content {
   text-align: center;
 }*/
-.page-template-page-video .sya #primary {
+/*.page-template-page-video .sya #primary {
   max-width: 1004px;
   margin: auto;
-}
+}*/
 
-.page-template-page-contact h1{
+.page-id-19 h1{
   font-size: 3.8rem;
 }
 

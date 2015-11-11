@@ -28,9 +28,7 @@ var toggleNav = function(){
 };
 
 var toggleVideoModal = function(){
-	console.log('in')
 	$('.video-thumb img').click(function(event){
-		console.log(event.target.data);
 		event.preventDefault();
 		openModal(event.target.id);
 	});
