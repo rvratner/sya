@@ -63,14 +63,14 @@ function naked_scripts()  {
 	  if ( is_page( 'page-template-page-protest' ) ) {
 	    /** Call landing-page-template-one enqueue */
 	    // add theme scripts
-		wp_enqueue_script( 'html2canvas', get_template_directory_uri() . '/js/html2canvas.js' );
+		//wp_enqueue_script( 'html2canvas', get_template_directory_uri() . '/js/html2canvas.js' );
 
 
 		// add pdf maker
-		wp_enqueue_script( 'jsPDF', get_template_directory_uri() . '/js/jsPDF.js', array( 'jquery' ), NAKED_VERSION, false );
+		//wp_enqueue_script( 'jsPDF', get_template_directory_uri() . '/js/jsPDF.js', array( 'jquery' ), NAKED_VERSION, false );
 
 		// add color picker
-		wp_enqueue_script( 'jscolor', get_template_directory_uri() . '/js/jscolor.min.js', array( 'jquery' ), NAKED_VERSION, false );
+		//wp_enqueue_script( 'jscolor', get_template_directory_uri() . '/js/jscolor.min.js', array( 'jquery' ), NAKED_VERSION, false );
 	  } 
 	
 	

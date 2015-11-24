@@ -667,10 +667,11 @@ html[xmlns] .clearfix {
 /* protest examples */
 .protest_examples li {
   display: inline-block;
-  width: 300px;
-  height: 300px;
+/*  width: 300px;
+  height: 300px;*/
+  width: 33%;
   float: left;
-  margin: 15px;
+  margin: 5px;
   padding: 5px;
 }
 
