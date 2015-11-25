@@ -566,6 +566,12 @@ html[xmlns] .clearfix {
   width: 100%;
   margin: auto;
 }
+.page-template-page-protest .sya {
+  max-width: 1000px;
+}
+.page-template-page-protest h2 {
+  margin-bottom: 60px;
+}
 .banner {
   font-family: 'HelveticaNeueLT-ExtBlackCondObl', Helvetica, sans-serif;
 }
@@ -667,10 +673,11 @@ html[xmlns] .clearfix {
 /* protest examples */
 .protest_examples li {
   display: inline-block;
-  width: 300px;
-  height: 300px;
+/*  width: 300px;
+  height: 300px;*/
+  width: 30%;
   float: left;
-  margin: 15px;
+  margin: 5px;
   padding: 5px;
 }
 
