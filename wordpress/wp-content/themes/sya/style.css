@@ -565,6 +565,7 @@ html[xmlns] .clearfix {
   max-width: 700px;
   width: 100%;
   margin: auto;
+  box-sizing: border-box;
 }
 .page-template-page-protest .sya {
   max-width: 1000px;
@@ -748,7 +749,26 @@ html[xmlns] .clearfix {
 #custom.show{
   display:block;
 }
+
+.single-post h1 {
+  font-size:4.3rem;
+  text-align: center;
+}
+.single-post iframe {
+  width: 100%;
+  height: 600px;
+}
+iframe {
+  max-width: 100%;
+}
 @media only screen and (max-width: 767px) {
+  .single-post h1 {
+    font-size:2.9rem;
+    line-height: 1.5;
+  }
+  .single-post h2 {
+    font-size:2.4rem;
+  }
   .main-navigation{
     position: absolute;
   }
@@ -788,7 +808,38 @@ html[xmlns] .clearfix {
 
 
 @media only screen and (max-width: 375px){
+  .sya {
+    padding: 0;
+    max-width: 100%;
+  }
   .video-content iframe{
     height: 260px;
   }
+
+   .single-post h1 {
+    font-size:2.1rem;
+  }
+  .single-post h2 {
+    font-size:2rem;
+  }
+}
+
+/* homepage override*/
+.home #content {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+.home .logo {
+    display: inline-block;
+    width: 30%;
+
+}
+.home .post {
+      display: inline-block;
+    width: 67%;
+    vertical-align: top;
+    text-align: left;
+    margin-left: 10px;
+
 }
