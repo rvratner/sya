@@ -12,6 +12,7 @@
 			<img src="<?php bloginfo( 'url' )?>/wp-content/themes/sya/img/button_example.jpg"/>
 			<h3>Button Party Kit</h3>
 			<p>Includes: template, logo pack, instructions, print-ready sheets</p>
+			<span class="download">Download</span>
 		</a>
 	</li>
 	<li>
@@ -19,13 +20,15 @@
 			<img src="<?php bloginfo( 'url' )?>/wp-content/themes/sya/img/poster_example.jpg"/>
 			<h3>Postering Kit</h3>
 			<p>Includes: template, logo pack, instructions, print-ready sheets</p>
+			<span class="download">Download</span>
 		</a>
 	</li>
 	<li>	
 		<a href="<?php bloginfo( 'url' )?>/wp-content/themes/sya/downloads/LogoPack.zip">
 			<img src="<?php bloginfo( 'url' )?>/wp-content/themes/sya/img/shirt_example.jpg"/>
 			<h3>Custom Kit</h3>
-			<p>logo pack, recommended places to print</p>
+			<p>Includes: logo pack. DIY!</p>
+			<span class="download">Download</span>
 		</a>
 	</li>	
 </ul>

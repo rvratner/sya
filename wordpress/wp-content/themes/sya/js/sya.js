@@ -11,9 +11,9 @@ var init = function(){
 		//renderYouTube();
 	}
 
-	if (document.querySelector('.page-template-page-protest')){
-		loadAssetBuilder();
-	}
+	// if (document.querySelector('.page-template-page-protest')){
+	// 	loadAssetBuilder();
+	// }
 };
 
 var toggleNav = function(){
@@ -104,20 +104,20 @@ var loadAssetBuilder = function(){
 	// clean up and make function
 	// download pdf
 
-	var pdf = new jsPDF('p','pt','a4');
-	console.log(pdf,document.getElementById('color_rect'));
-	pdf.addHTML(document.body, false, false, false, function() {
-		var string = pdf.output('datauristring');
-		$('.preview-pane').attr('src', string);
-		//pdf.save();
-	});
-		//pdf.save();
+	// var pdf = new jsPDF('p','pt','a4');
+	// console.log(pdf,document.getElementById('color_rect'));
+	// pdf.addHTML(document.body, false, false, false, function() {
+	// 	var string = pdf.output('datauristring');
+	// 	$('.preview-pane').attr('src', string);
+	// 	//pdf.save();
+	// });
+	// 	//pdf.save();
 
 }
 
-var updateColor = function(jscolor){
-	document.getElementById('color_rect').style.backgroundColor = '#' + jscolor
-}
+// var updateColor = function(jscolor){
+// 	document.getElementById('color_rect').style.backgroundColor = '#' + jscolor
+// }
 window.onload = init ();
 	
 })(jQuery);
