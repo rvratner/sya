@@ -824,7 +824,7 @@ iframe {
   }
 }
 
-/* homepage override*/
+/* homepage override - if posts, add these styles*/
 .home #content {
     text-align: center;
     width: 90%;
