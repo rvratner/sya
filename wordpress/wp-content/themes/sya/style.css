@@ -383,14 +383,14 @@ pre {
 /* Links */
 a {
   text-decoration: none;
-  color: rgba(0, 121, 152, 0.5);
+  color: rgba(255,0,0,1);
 }
 a:hover,
 a:focus,
 a:active,
 a:visited {
 
-  color: rgba(0, 121, 152, 0.5);
+  color: rgba(255,0,0,0.8);
 }
 
 img {
@@ -499,6 +499,7 @@ header nav ul li a:hover {
 }
 .main-navigation.show{
   position: fixed;
+  z-index:1;
 }
 .logged-in .main-navigation {
   top: 30px;
@@ -559,6 +560,7 @@ html[xmlns] .clearfix {
   height: 70%;
   min-height: 200px;
   max-height: 700px;
+  margin-bottom: 20px;
 }
 .sya{
   padding: 0 15px;
@@ -749,24 +751,71 @@ html[xmlns] .clearfix {
 #custom.show{
   display:block;
 }
-
-.single-post h1 {
+.blog h1 a {
+  color: #000;
+  text-decoration: none;
+}
+.single-post h1, .blog h1 {
   font-size:4.3rem;
   text-align: center;
 }
-.single-post iframe {
+.single-post iframe, .blog iframe {
   width: 100%;
   height: 600px;
 }
 iframe {
   max-width: 100%;
 }
+
+/* homepage override*/
+
+.home .post {
+  display: none;
+}
+.home .hasContent .post {
+  display: block;
+}
+
+.home .hasContent#content {
+    text-align: center;
+    position: absolute;
+    max-width: 750px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 350px;
+}
+.hasContent .logo {
+    display: inline-block;
+    width: 30%;
+    height: auto;
+
+}
+.home .hasContent .post {
+    display: inline-block;
+    width: 63%;
+    vertical-align: top;
+    text-align: left;
+    margin: auto;
+    max-width: 430px;
+    margin-left: 30px;
+}
+.hasContent .banner {
+  display:none;
+}
+.hasContent h2{
+  font-size: 2.8rem;
+}
+
+
 @media only screen and (max-width: 767px) {
-  .single-post h1 {
+  .single-post h1, .blog h1 {
     font-size:2.9rem;
     line-height: 1.5;
   }
-  .single-post h2 {
+  .single-post h2, .blog h2 {
     font-size:2.4rem;
   }
   .main-navigation{
@@ -776,7 +825,7 @@ iframe {
     height: 40px;
   }
   #masthead.open{
-    height: 100px;
+    height: 180px;
   }
   .video-content {
     width: 100%;
@@ -804,42 +853,52 @@ iframe {
     float:none;
 
   }
+
+   .home .hasContent#content {
+    text-align: center;
+    position: relative;
+    max-width:100%;
+
+  }
+  .hasContent .logo {
+      display: block;
+      width: 90%;
+      height: auto;
+      margin: 20px auto;
+      max-width: 300px;
+  }
+
+  .home .hasContent .post {
+      display: block;
+      width: 100%;
+      margin: auto;
+  }
 }
 
 
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 460px){
   .sya {
-    padding: 0;
     max-width: 100%;
+    margin-top: 20px;
   }
   .video-content iframe{
     height: 260px;
   }
-
-   .single-post h1 {
-    font-size:2.1rem;
+  .hasContent h2 {
+    font-size:1.8rem;
   }
-  .single-post h2 {
-    font-size:2rem;
+  .single-post h1, .blog h1 {
+    font-size:1.8rem;
   }
-}
+  .single-post h2, .blog h2 {
+    font-size:1.6rem;
+  }
+  .main-navigation.show {
+    width: 100%;
+  }
 
-/* homepage override - if posts, add these styles*/
-.home #content {
-    text-align: center;
-    width: 90%;
-    margin: auto;
-}
-.home .logo {
-    display: inline-block;
-    width: 30%;
+
+
 
 }
-.home .post {
-      display: inline-block;
-    width: 67%;
-    vertical-align: top;
-    text-align: left;
-    margin-left: 10px;
 
-}

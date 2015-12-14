@@ -8,34 +8,29 @@
 */
 get_header(); ?>
 	<div id="primary" class="row-fluid">
-		<div id="content" role="main" class="span12">
+
+
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<?php 
+			if (strlen(get_the_content())>0){
+				$class = 'hasContent';
+			} 
+
+
+			?>
+		<div id="content" role="main" class="<?php print $class;?>">
 		
 		<!-- logo -->			
 		<img class="logo" src="<?php bloginfo( 'url' )?>/wp-content/themes/sya/img/logo_red.png"/>
     	
     	<!-- pulls in site tagline -->			
-<!--     	<div class="banner"><?php bloginfo( 'description' );  ?></div>
- -->
-
-
-
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<div class="banner"><?php bloginfo( 'description' );  ?></div>
 
 
 					<article class="post">
-					
-						<h1 class="title">
-							<a href="<?php the_permalink(); // Get the link to this post ?>" title="<?php the_title(); ?>">
-								<?php the_title(); // Show the title of the posts as a link ?>
-							</a>
-						</h1>
 						
 						<div class="the-content">
-							<?php the_content( ); 
-							// This call the main content of the post, the stuff in the main text box while composing.
-							// This will wrap everything in p tags and show a link as 'Continue...' where/if the
-							// author inserted a <!-- more --> link in the post body
-							?>
+							<?php the_content( );?>
 							
 						</div><!-- the-content -->
 						
