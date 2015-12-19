@@ -8,33 +8,32 @@
 */
 get_header(); ?>
 	<div id="primary" class="row-fluid">
-			
+
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<?php 
+			if (strlen(get_the_content())>0){
+				$class = 'hasContent';
+			} 
 
-		<?php $content = strlen(get_the_content());
 
-			if ($content > 0){
-				$class = "hasContent";	
-			}
-		?>
-		<div id="content" role="main" class="<?php print $class ?>">
-
-			<!-- logo -->			
-			<img class="logo" src="<?php bloginfo( 'url' )?>/wp-content/themes/sya/img/logo_red.png"/>
+			?>
+		<div id="content" role="main" class="<?php print $class;?>">
+		
+		<!-- logo -->			
+		<img class="logo" src="<?php bloginfo( 'url' )?>/wp-content/themes/sya/img/logo_red.png"/>
     	
     	<!-- pulls in site tagline -->			
-    	<div class="banner"><?php bloginfo( 'description' );  ?></div>
+		<div class="banner"><?php bloginfo( 'description' );  ?></div>
 
 
-			<article class="post">
-			
-				
-				<div class="the-content">
-					<?php the_content( ); ?>
-					
-				</div><!-- the-content -->
-				
-			</article>
+					<article class="post">
+						
+						<div class="the-content">
+							<?php the_content( );?>
+							
+						</div><!-- the-content -->
+						
+					</article>
 
 			<?php endwhile; else : ?>
 			

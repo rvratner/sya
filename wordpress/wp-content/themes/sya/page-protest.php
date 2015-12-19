@@ -30,7 +30,15 @@
 			<p>Includes: logo pack. DIY!</p>
 			<span class="download">Download</span>
 		</a>
-	</li>	
+	</li>
+	<li>	
+		<a href="<?php bloginfo( 'url' )?>/wp-content/themes/sya/downloads/SYA_handbill.pdf">
+			<img style="border: 1px solid #333" src="<?php bloginfo( 'url' )?>/wp-content/themes/sya/img/handbill.png"/>
+			<h3>Handbill</h3>
+			<p>8.5" x 11" flyer to print and share</p>
+			<span class="download">Download</span>
+		</a>
+	</li>		
 </ul>
 
 
